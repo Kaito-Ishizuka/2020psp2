@@ -36,7 +36,7 @@ ave_square = ave_online(val*val,ave_square,n);
 n++;
 }
 
-u = var * (n-1)/(n-2);
+u = var * (n-1) / (n-2);
 
 printf("sample mean:%.21fln",ave);
 printf("sample variance:%.21fln" ,var);

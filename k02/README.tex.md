@@ -24,13 +24,17 @@ $$
 と計算できる．$p$は仮定した確率密度関数で，$\theta$はその母数．$p$が正規分布なら，$\theta$は，平均$\mu$と分散$\sigma^2$である．
 
 ## ソースコードの説明
-
+l33 A県の値を標準化
+l34 B県の値を標準化
+l35 A県の尤度を求める
+l36 B県の尤度を求める
 ## 入出力結果
 
 ```
 Likelihood for A：
 Likelihood for B：
 ```
-
+Likelihood for A: 0.000006
+Likelihood for B: 0.000002
 ## 修正履歴
 

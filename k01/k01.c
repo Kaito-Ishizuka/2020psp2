@@ -7,11 +7,11 @@ extern double ave_online(double val,double ave,int n);
 extern double var_online(double val,double ave,double ave_square,int n);
 int main(void)
 {
-    double ave;
-    double n;
+    double ave = 0;
+    double n = 1;
     double u;
     double var;
-    double ave_square;
+    double ave_square = 0;
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
@@ -36,16 +36,16 @@ ave_square = ave_online(val*val,ave_square,n);
 n++;
 }
 
-u = var * (n-1)/(n-2);
+u = var * (n-1) / (n-2);
 
-printf("sample mean:%.21fln",ave);
-printf("sample variance:%.21fln" ,var);
-printf("population mean (estimated):%.21f/n",ave);
-printf("population variance (estimated):%.21f/n",u);
+printf("sample mean:%.2lf\n",ave);
+printf("sample variance:%.2lf\n" ,var);
+printf("population mean (estimated):%.2lf\n",ave);
+printf("population variance (estimated):%.2lf\n",u);
 
 if(fclose(fp) == EOF)
 {
-fputs("file close error/n",stderr);
+fputs("file close error\n",stderr);
 exit(EXIT_FAILURE);
 }
 
@@ -55,12 +55,12 @@ return 0;
 double ave_online(double val,double ave,int n)
 {
 double f;
-f = ave * (n - 1) /n + val / n;
+f = ave * (n - 1) / n + val / n;
 return f;
 }
 double var_online(double val,double ave,double ave_square,int n)
 {
 double g;
-g = ave_square * (n - 1) /n + val * val / n - ave_online(val,ave,n) * ave_online(val,ave,n);
+g = ave_square * (n - 1) / n + val * val / n - ave_online(val,ave,n) * ave_online(val,ave,n);
 return g;
 }

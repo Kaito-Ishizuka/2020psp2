@@ -11,36 +11,17 @@ aa83988848 薗田光太郎
 この二つのファイルを読み取り，学籍番号，身長，性別の3つをメンバーとする構造体の配列で管理するとよい．
 
 ## ソースコードの説明
+
 l50 ファイル内の性別をgenderに代入
+
 l51 ファイル内の身長をheightsに代入
+
 l60 ファイル内の番号をIDに代入
+
 l73~79  性別の判定
-
-
-
 
 ## 入出力結果
 
-例えば，ID 45313125のデータを調べたいとき，
-
-```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313125
----
-ID : 45313125
-gender : Female
-height : 152.4
-```
-
-例えば，ID 45313124のデータを調べたいとき，
-
-```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313124
----
-No data
 ```
 $ ./k04
 input the filename of sample heights:../sample/heights.csv 
@@ -55,8 +36,12 @@ input the filename of sample heights:../sample/heights.csv
 input the filename of sample ID:../sample/IDs.csv
 which ID's data do you want?; 45313124
 No data
+```
 
 ## 修正履歴
 
 [comment #20200708 moto]
 - OKです。
+
+[comment #20200716 sonoda]
+- 課題4の完了を確認しました
